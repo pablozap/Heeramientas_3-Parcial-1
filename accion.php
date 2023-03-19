@@ -27,12 +27,16 @@
             break;
         case 2:
             echo "REGISTRO...";
-            $persona = new Persona($_POST["id"], $_POST["user"], $_POST["pass"]);
+            $persona = new Persona(trim($_POST["id"]), trim($_POST["user"]), trim($_POST["pass"]));
+            $vacio = (!empty($persona->getId()) && !empty($persona->getUser()) && !empty($persona->getPassword()));
+            echo $vacio;
             print_r($persona);
-            $archivo = fopen("usuarios.txt", "a");
-            $usuarioRegistro = $persona->getId() . $delimitador . $persona->getUser(). $delimitador . $persona->getPassword();
-            fwrite($archivo, $usuarioRegistro.PHP_EOL);
-            fclose($archivo);
+            if ($vacio){
+                $archivo = fopen("usuarios.txt", "a");
+                $usuarioRegistro = $persona->getId() . $delimitador . $persona->getUser(). $delimitador . $persona->getPassword();
+                fwrite($archivo, $usuarioRegistro.PHP_EOL);
+                fclose($archivo);
+            }
             echo "<br><a href='registro.html'>Ir al registro...</a>";
             break;
     }
