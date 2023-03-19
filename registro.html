@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="style/style.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio Sesión</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Inicio Sesión</title>        
     </head>
     <body>
-        <h2>Registrate.</h2>
-        <form action="accion.php" method="post">
+        <header><h2>Registrate.</h2></header>
+        <form action="accion.php" method="post" class="formulario">
             <label>Numero de identificación.</label><br>
             <input type="number" name="id" required>
             <br>
@@ -19,10 +19,10 @@
             <label>Contraseña.</label><br>
             <input type="password" name="pass" required>
             <br>
-            <hr>
             <input type="hidden" name="opc" value="2">
-            <input type="submit" value="REGISTRAR">
+            <input type="submit" value="REGISTRAR" class="boton">
         </form>
-        <br><a href="index.html">IR A INICIO SESIÓN.</a>
+        <br>
+        <a href="index.html">Iniciar Sesión</a>
     </body>
 </html>

@@ -1,0 +1,21 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+.boton{
+    border-radius: 15%;
+    padding: 30px 10px;
+    padding: 15px 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color:crimson;
+    text-decoration:underline;
+    font-size: larger;
+}
