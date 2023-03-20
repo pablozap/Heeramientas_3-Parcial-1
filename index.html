@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="style/style.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio Sesión</title>
+        <title>Inicio Sesión</title>        
     </head>
     <body>
-        <h2>Inicio de Sesión</h2>
-        <form action="accion.php" method="post">
+        <header><h2>Inicio de Sesión</h2></header>
+        <form action="accion.php" method="post" class="formulario">
             <label>Usuario.</label><br>
             <input type="text" name="user" required>
             <br>
             <label>Contraseña.</label><br>
             <input type="password" name="pass" required>
             <br>
-            <hr>
             <input type="hidden" name="opc" value="1">
-            <input type="submit" value="INGRESAR">
+            <input type="submit" value="INGRESAR" class="boton">
         </form>
-        <br><a href="registro.html">IR A REGISTRO.</a>
+        <br>
+        <a href="registro.html">Registrate</a>
     </body>
 </html>
