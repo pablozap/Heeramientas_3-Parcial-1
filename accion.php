@@ -32,7 +32,7 @@
             echo "<br><a href='index.html'>Ir al inicio de sesión...</a>";
             break;
         case 2:
-            echo "REGISTRO...";
+            echo "REGISTRO...<br>";
             $persona = new Persona(trim($_POST["id"]), trim($_POST["user"]), trim($_POST["pass"]));
             $vacio = (!empty($persona->getId()) && !empty($persona->getUser()) && !empty($persona->getPassword()));
             if($vacio) {
@@ -50,7 +50,6 @@
                     }
                 }
                 fclose($usuarios);
-                echo ($existe_usuario);
                 if ($existe_usuario == true){
                     echo "El usuario ya existe ";
                 }else {
@@ -63,6 +62,7 @@
             }else {
                 echo "Solo se permiten letras y números, sin espacios";
             }
+            echo '<br><a href="registro.html">Ir al registro</a>';
         break;
     }
 ?>
